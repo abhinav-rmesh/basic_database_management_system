@@ -1,0 +1,20 @@
+{
+    "columns": [
+        {
+            "name": "ID",
+            "type": "INT",
+            "length": 4
+        },
+        {
+            "name": "NAME",
+            "type": "VARCHAR",
+            "length": 20
+        }
+    ],
+    "keys": {
+        "primary": [
+            "ID"
+        ],
+        "foreign": []
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "columns": [
+        {
+            "name": "EMPLOYEEID",
+            "type": "INT",
+            "length": 3
+        },
+        {
+            "name": "LASTNAME",
+            "type": "VARCHAR",
+            "length": 20
+        },
+        {
+            "name": "FIRSTNAME",
+            "type": "VARCHAR",
+            "length": 10
+        },
+        {
+            "name": "TITLE",
+            "type": "VARCHAR",
+            "length": 30
+        },
+        {
+            "name": "TITLEOFCOURTESY",
+            "type": "VARCHAR",
+            "length": 25
+        },
+        {
+            "name": "BIRTHDATE",
+            "type": "VARCHAR",
+            "length": 25
+        },
+        {
+            "name": "HIREDATE",
+            "type": "VARCHAR",
+            "length": 25
+        },
+        {
+            "name": "ADDRESS",
+            "type": "VARCHAR",
+            "length": 60
+        },
+        {
+            "name": "CITY",
+            "type": "VARCHAR",
+            "length": 15
+        },
+        {
+            "name": "REGION",
+            "type": "VARCHAR",
+            "length": 15
+        },
+        {
+            "name": "POSTALCODE",
+            "type": "VARCHAR",
+            "length": 10
+        },
+        {
+            "name": "COUNTRY",
+            "type": "VARCHAR",
+            "length": 15
+        },
+        {
+            "name": "HOMEPHONE",
+            "type": "VARCHAR",
+            "length": 24
+        },
+        {
+            "name": "EXTENSION",
+            "type": "VARCHAR",
+            "length": 4
+        },
+        {
+            "name": "NOTES",
+            "type": "VARCHAR",
+            "length": 50
+        },
+        {
+            "name": "REPORTSTO",
+            "type": "INT",
+            "length": 3
+        },
+        {
+            "name": "PHOTOPATH",
+            "type": "VARCHAR",
+            "length": 255
+        },
+        {
+            "name": "SALARY",
+            "type": "DOUBLE",
+            "length": 3
+        }
+    ],
+    "keys": {
+        "primary": [
+            "EMPLOYEEID"
+        ],
+        "foreign": []
+    }
+}

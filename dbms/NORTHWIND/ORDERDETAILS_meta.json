@@ -1,0 +1,42 @@
+{
+  "columns": [
+    {
+      "name": "ORDERID",
+      "type": "INT",
+      "length": 3
+    },
+    {
+      "name": "PRODUCTID",
+      "type": "INT",
+      "length": 3
+    },
+    {
+      "name": "UNITPRICE",
+      "type": "DOUBLE",
+      "length": 10
+    },
+    {
+      "name": "QUANTITY",
+      "type": "INT",
+      "length": 3
+    },
+    {
+      "name": "DISCOUNT",
+      "type": "DOUBLE",
+      "length": 8
+    }
+  ],
+  "keys": {
+    "primary": [
+      "ORDERID",
+      "PRODUCTID"
+    ],
+    "foreign": [
+      {
+        "name": "PRODUCTID",
+        "ref_table": "PRODUCTS",
+        "ref_column": "PRODUCTID"
+      }
+    ]
+  }
+}

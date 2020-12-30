@@ -1,0 +1,65 @@
+{
+    "columns": [
+        {
+            "name": "CUSTOMERID",
+            "type": "VARCHAR",
+            "length": 5
+        },
+        {
+            "name": "COMPANYNAME",
+            "type": "VARCHAR",
+            "length": 40
+        },
+        {
+            "name": "CONTACTNAME",
+            "type": "VARCHAR",
+            "length": 30
+        },
+        {
+            "name": "CONTACTTITLE",
+            "type": "VARCHAR",
+            "length": 30
+        },
+        {
+            "name": "ADDRESS",
+            "type": "VARCHAR",
+            "length": 60
+        },
+        {
+            "name": "CITY",
+            "type": "VARCHAR",
+            "length": 15
+        },
+        {
+            "name": "REGION",
+            "type": "VARCHAR",
+            "length": 15
+        },
+        {
+            "name": "POSTALCODE",
+            "type": "VARCHAR",
+            "length": 10
+        },
+        {
+            "name": "COUNTRY",
+            "type": "VARCHAR",
+            "length": 15
+        },
+        {
+            "name": "PHONE",
+            "type": "VARCHAR",
+            "length": 24
+        },
+        {
+            "name": "FAX",
+            "type": "VARCHAR",
+            "length": 24
+        }
+    ],
+    "keys": {
+        "primary": [
+            "CUSTOMERID"
+        ],
+        "foreign": []
+    }
+}

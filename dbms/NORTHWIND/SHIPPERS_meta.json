@@ -1,0 +1,25 @@
+{
+    "columns": [
+        {
+            "name": "SHIPPERID",
+            "type": "INT",
+            "length": 3
+        },
+        {
+            "name": "COMPANYNAME",
+            "type": "VARCHAR",
+            "length": 40
+        },
+        {
+            "name": "PHONE",
+            "type": "VARCHAR",
+            "length": 24
+        }
+    ],
+    "keys": {
+        "primary": [
+                "SHIPPERID"
+        ],
+        "foreign": []
+    }
+}

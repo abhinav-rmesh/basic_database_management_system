@@ -1,0 +1,25 @@
+{
+    "columns": [
+        {
+            "name": "CATEGORYID",
+            "type": "INT",
+            "length": 3
+        },
+        {
+            "name": "CATEGORYNAME",
+            "type": "VARCHAR",
+            "length": 15
+        },
+        {
+            "name": "DESCRIPTION",
+            "type": "VARCHAR",
+            "length": 15
+        }
+    ],
+    "keys": {
+        "primary": [
+            "CATEGORYID"
+        ],
+        "foreign": []
+    }
+}

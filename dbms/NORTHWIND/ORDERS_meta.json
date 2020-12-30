@@ -1,0 +1,98 @@
+{
+    "columns": [
+        {
+            "name": "ORDERID",
+            "type": "INT",
+            "length": 3
+        },
+        {
+            "name": "CUSTOMERID",
+            "type": "VARCHAR",
+            "length": 5
+        },
+        {
+            "name": "EMPLOYEEID",
+            "type": "INT",
+            "length": 3
+        },
+        {
+            "name": "ORDERDATE",
+            "type": "VARCHAR",
+            "length": 12
+        },
+        {
+            "name": "REQUIREDDATE",
+            "type": "VARCHAR",
+            "length": 12
+        },
+        {
+            "name": "SHIPPEDDATE",
+            "type": "VARCHAR",
+            "length": 12
+        },
+        {
+            "name": "SHIPVIA",
+            "type": "INT",
+            "length": 2
+        },
+        {
+            "name": "FREIGHT",
+            "type": "DOUBLE",
+            "length": 10
+        },
+        {
+            "name": "SHIPNAME",
+            "type": "VARCHAR",
+            "length": 40
+        },
+        {
+            "name": "SHIPADDRESS",
+            "type": "VARCHAR",
+            "length": 60
+        },
+        {
+            "name": "SHIPCITY",
+            "type": "VARCHAR",
+            "length": 15
+        },
+        {
+            "name": "SHIPREGION",
+            "type": "VARCHAR",
+            "length": 15
+        },
+        {
+            "name": "SHIPPOSTALCODE",
+            "type": "VARCHAR",
+            "length": 10
+        },
+        {
+            "name": "SHIPCOUNTRY",
+            "type": "VARCHAR",
+            "length": 15
+        }
+    ],
+    "keys": {
+        "primary": [
+            "ORDERID"
+        ],
+        "foreign": [
+            {
+                "name": "ORDERID",
+                "ref_table": "ORDERDETAILS",
+                "ref_column": "ORDERID"
+            },{
+                "name": "CUSTOMERID",
+                "ref_table": "CUSTOMERS",
+                "ref_column": "CUSTOMERID"
+            },{
+                "name": "EMPLOYEEID",
+                "ref_table": "EMPLOYEES",
+                "ref_column": "EMPLOYEEID"
+            },{
+                "name": "SHIPVIA",
+                "ref_table": "SHIPPERS",
+                "ref_column": "SHIPPERID"
+            }
+        ]
+    }
+}

@@ -1,0 +1,47 @@
+
+The name of the table is : CATEGORIES
+The Attributes of the table are : ['CATEGORYID', 'CATEGORYNAME', 'DESCRIPTION']
+The Primary key is : ['CATEGORYID']
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The name of the table is : CUSTOMERS
+The Attributes of the table are : ['CATEGORYID', 'CATEGORYNAME', 'DESCRIPTION', 'CUSTOMERID', 'COMPANYNAME', 'CONTACTNAME', 'CONTACTTITLE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'PHONE', 'FAX']
+The Primary key is : ['CUSTOMERID']
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The name of the table is : EMPLOYEES
+The Attributes of the table are : ['CATEGORYID', 'CATEGORYNAME', 'DESCRIPTION', 'CUSTOMERID', 'COMPANYNAME', 'CONTACTNAME', 'CONTACTTITLE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'PHONE', 'FAX', 'EMPLOYEEID', 'LASTNAME', 'FIRSTNAME', 'TITLE', 'TITLEOFCOURTESY', 'BIRTHDATE', 'HIREDATE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'HOMEPHONE', 'EXTENSION', 'NOTES', 'REPORTSTO', 'PHOTOPATH', 'SALARY']
+The Primary key is : ['EMPLOYEEID']
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The name of the table is : ORDERDETAILS
+The Attributes of the table are : ['CATEGORYID', 'CATEGORYNAME', 'DESCRIPTION', 'CUSTOMERID', 'COMPANYNAME', 'CONTACTNAME', 'CONTACTTITLE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'PHONE', 'FAX', 'EMPLOYEEID', 'LASTNAME', 'FIRSTNAME', 'TITLE', 'TITLEOFCOURTESY', 'BIRTHDATE', 'HIREDATE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'HOMEPHONE', 'EXTENSION', 'NOTES', 'REPORTSTO', 'PHOTOPATH', 'SALARY', 'ORDERID', 'PRODUCTID', 'UNITPRICE', 'QUANTITY', 'DISCOUNT']
+The Primary key is : ['ORDERID', 'PRODUCTID']
+The Foreign key is : PRODUCTID. It is the primary key for the table : PRODUCTS
+The Cardinality between the "ORDERDETAILS" table and "PRODUCTS" table is : 1 to 1
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The name of the table is : ORDERS
+The Attributes of the table are : ['CATEGORYID', 'CATEGORYNAME', 'DESCRIPTION', 'CUSTOMERID', 'COMPANYNAME', 'CONTACTNAME', 'CONTACTTITLE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'PHONE', 'FAX', 'EMPLOYEEID', 'LASTNAME', 'FIRSTNAME', 'TITLE', 'TITLEOFCOURTESY', 'BIRTHDATE', 'HIREDATE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'HOMEPHONE', 'EXTENSION', 'NOTES', 'REPORTSTO', 'PHOTOPATH', 'SALARY', 'ORDERID', 'PRODUCTID', 'UNITPRICE', 'QUANTITY', 'DISCOUNT', 'ORDERID', 'CUSTOMERID', 'EMPLOYEEID', 'ORDERDATE', 'REQUIREDDATE', 'SHIPPEDDATE', 'SHIPVIA', 'FREIGHT', 'SHIPNAME', 'SHIPADDRESS', 'SHIPCITY', 'SHIPREGION', 'SHIPPOSTALCODE', 'SHIPCOUNTRY']
+The Primary key is : ['ORDERID']
+The Foreign key is : ORDERID. It is the primary key for the table : ORDERDETAILS
+The Cardinality between the "ORDERS" table and "ORDERDETAILS" table is : 1 to 1
+The Foreign key is : CUSTOMERID. It is the primary key for the table : CUSTOMERS
+The Cardinality between the "ORDERS" table and "CUSTOMERS" table is : 1 to Many
+The Foreign key is : EMPLOYEEID. It is the primary key for the table : EMPLOYEES
+The Cardinality between the "ORDERS" table and "EMPLOYEES" table is : 1 to Many
+The Foreign key is : SHIPVIA. It is the primary key for the table : SHIPPERS
+The Cardinality between the "ORDERS" table and "SHIPPERS" table is : 1 to Many
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The name of the table is : PRODUCTS
+The Attributes of the table are : ['CATEGORYID', 'CATEGORYNAME', 'DESCRIPTION', 'CUSTOMERID', 'COMPANYNAME', 'CONTACTNAME', 'CONTACTTITLE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'PHONE', 'FAX', 'EMPLOYEEID', 'LASTNAME', 'FIRSTNAME', 'TITLE', 'TITLEOFCOURTESY', 'BIRTHDATE', 'HIREDATE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'HOMEPHONE', 'EXTENSION', 'NOTES', 'REPORTSTO', 'PHOTOPATH', 'SALARY', 'ORDERID', 'PRODUCTID', 'UNITPRICE', 'QUANTITY', 'DISCOUNT', 'ORDERID', 'CUSTOMERID', 'EMPLOYEEID', 'ORDERDATE', 'REQUIREDDATE', 'SHIPPEDDATE', 'SHIPVIA', 'FREIGHT', 'SHIPNAME', 'SHIPADDRESS', 'SHIPCITY', 'SHIPREGION', 'SHIPPOSTALCODE', 'SHIPCOUNTRY', 'PRODUCTID', 'PRODUCTNAME', 'SUPPLIERID', 'CATEGORYID', 'QUANTITYPERUNIT', 'UNITPRICE', 'UNITSINSTOCK', 'UNITSONORDER', 'REORDERLEVEL', 'DISCONTINUED']
+The Primary key is : ['PRODUCTID']
+The Foreign key is : SUPPLIERID. It is the primary key for the table : SUPPLIERS
+The Cardinality between the "PRODUCTS" table and "SUPPLIERS" table is : 1 to Many
+The Foreign key is : CATEGORYID. It is the primary key for the table : CATEGORIES
+The Cardinality between the "PRODUCTS" table and "CATEGORIES" table is : 1 to Many
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The name of the table is : SHIPPERS
+The Attributes of the table are : ['CATEGORYID', 'CATEGORYNAME', 'DESCRIPTION', 'CUSTOMERID', 'COMPANYNAME', 'CONTACTNAME', 'CONTACTTITLE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'PHONE', 'FAX', 'EMPLOYEEID', 'LASTNAME', 'FIRSTNAME', 'TITLE', 'TITLEOFCOURTESY', 'BIRTHDATE', 'HIREDATE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'HOMEPHONE', 'EXTENSION', 'NOTES', 'REPORTSTO', 'PHOTOPATH', 'SALARY', 'ORDERID', 'PRODUCTID', 'UNITPRICE', 'QUANTITY', 'DISCOUNT', 'ORDERID', 'CUSTOMERID', 'EMPLOYEEID', 'ORDERDATE', 'REQUIREDDATE', 'SHIPPEDDATE', 'SHIPVIA', 'FREIGHT', 'SHIPNAME', 'SHIPADDRESS', 'SHIPCITY', 'SHIPREGION', 'SHIPPOSTALCODE', 'SHIPCOUNTRY', 'PRODUCTID', 'PRODUCTNAME', 'SUPPLIERID', 'CATEGORYID', 'QUANTITYPERUNIT', 'UNITPRICE', 'UNITSINSTOCK', 'UNITSONORDER', 'REORDERLEVEL', 'DISCONTINUED', 'SHIPPERID', 'COMPANYNAME', 'PHONE']
+The Primary key is : ['SHIPPERID']
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The name of the table is : SUPPLIERS
+The Attributes of the table are : ['CATEGORYID', 'CATEGORYNAME', 'DESCRIPTION', 'CUSTOMERID', 'COMPANYNAME', 'CONTACTNAME', 'CONTACTTITLE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'PHONE', 'FAX', 'EMPLOYEEID', 'LASTNAME', 'FIRSTNAME', 'TITLE', 'TITLEOFCOURTESY', 'BIRTHDATE', 'HIREDATE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'HOMEPHONE', 'EXTENSION', 'NOTES', 'REPORTSTO', 'PHOTOPATH', 'SALARY', 'ORDERID', 'PRODUCTID', 'UNITPRICE', 'QUANTITY', 'DISCOUNT', 'ORDERID', 'CUSTOMERID', 'EMPLOYEEID', 'ORDERDATE', 'REQUIREDDATE', 'SHIPPEDDATE', 'SHIPVIA', 'FREIGHT', 'SHIPNAME', 'SHIPADDRESS', 'SHIPCITY', 'SHIPREGION', 'SHIPPOSTALCODE', 'SHIPCOUNTRY', 'PRODUCTID', 'PRODUCTNAME', 'SUPPLIERID', 'CATEGORYID', 'QUANTITYPERUNIT', 'UNITPRICE', 'UNITSINSTOCK', 'UNITSONORDER', 'REORDERLEVEL', 'DISCONTINUED', 'SHIPPERID', 'COMPANYNAME', 'PHONE', 'SUPPLIERID', 'COMPANYNAME', 'CONTACTNAME', 'CONTACTTITLE', 'ADDRESS', 'CITY', 'REGION', 'POSTALCODE', 'COUNTRY', 'PHONE', 'FAX', 'HOMEPAGE']
+The Primary key is : ['SUPPLIERID']
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

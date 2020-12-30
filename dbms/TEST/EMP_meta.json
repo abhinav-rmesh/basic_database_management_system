@@ -1,0 +1,36 @@
+{
+	"columns":[
+		{
+			"name":"ID",
+			"type":"INT",
+			"length": 2
+		},
+		{
+			"name":"FIRSTNAME",
+			"type":"VARCHAR",
+			"length": 20
+		},
+		{
+			"name":"LASTNAME",
+			"type":"VARCHAR",
+			"length": 20
+		},
+		{
+			"name":"SALARY",
+			"type":"DOUBLE",
+			"length": 6
+		}
+	],
+	
+	"keys":{
+	
+		"primary":[ "ID" ],
+		"foreign":[
+			{
+				"name":"FIRSTNAME",
+				"ref_table": "EMP",
+				"ref_column": "NAME"
+			}
+		]
+	}
+}
